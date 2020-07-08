@@ -11,7 +11,7 @@ void calc() {
 float firstNumber = 0;
 float secondNumber = 0;
 float thirdNumber = 0;
-float disc = 0;//дискримінант (для квадратного рівняння)
+float disc = 0;//discriminant (for quadratic equation)
 
 float x1 = 0;
 float x2 = 0;
@@ -46,27 +46,27 @@ void calc_nice() {
 	}
 }
 
-float add(float a, float b) { //додавання
+float add(float a, float b) { //addition
 	return a + b;
 }
 
-float sub(float a, float b) { // вiднiмання
+float sub(float a, float b) { //subtraction
 	return a - b;
 }
 
-float div(float a, float b) { //дiлення
+float div(float a, float b) { //division
 	return a / b;
 }
 
-float mul(float a, float b) { //множення
+float mul(float a, float b) { //multiplication
 	return a * b;
 }
 
-float square(float a) { //пiднесення до квадрату
+float square(float a) { //squaring
 	return a * a;
 }
 
-float square_root(float a) { //квадратний корiнь
+float square_root(float a) { //square root
 	float root_add = 0.00001;
 	float sqrt = 0;
 	while (sqrt * sqrt < a) {
@@ -75,7 +75,7 @@ float square_root(float a) { //квадратний корiнь
 	return sqrt;
 }
 
-float discriminant(float a,float b, float c) { //дискримінант
+float discriminant(float a,float b, float c) { //discriminant
 	return (b * b) - 4 * a * c;
 }
 
@@ -108,35 +108,35 @@ int main() {
 
 		switch (choise)
 		{
-		case 1: {//додавання
+		case 1: {//addition
 			calc_result = add(firstNumber, secondNumber);
 			cout << firstNumber << " + " << secondNumber << " = " << calc_result << endl;
 		}break;
 
-		case 2: {// вiднiмання
+		case 2: {//subtraction
 			calc_result = sub(firstNumber, secondNumber);
 			cout << firstNumber << " - " << secondNumber << " = " << calc_result << endl;
 		}break;
 
-		case 3: {//дiлення
+		case 3: {//division
 			calc_result = div(firstNumber, secondNumber);
 			cout << firstNumber << " / " << secondNumber << " = " << calc_result << endl;
 		}break;
 
-		case 4: {//множення
+		case 4: {//multiplication
 			calc_result = mul(firstNumber, secondNumber);
 			cout << firstNumber << " * " << secondNumber << " = " << calc_result << endl;
 		}break;
 
-		case 5: {//пiднесення до квадрату
+		case 5: {//squaring
 			calc_result = square(firstNumber);
 			cout << firstNumber << " ^2 = " << calc_result << endl;
 		}break;
-		case 6: {//квадратний корiнь
+		case 6: {//square root
 			calc_result = square_root(firstNumber);
 			cout << "Square root of " << firstNumber << " = " << setprecision(5)<< calc_result << endl;
 		}break;
-		case 7: {//квадратне рівняння
+		case 7: {//quadratic equation
 			calc_result = discriminant(firstNumber, secondNumber, thirdNumber);
 			if (calc_result == 0) {
 				x1 = ((-1) * (secondNumber)) / 2 * firstNumber;
@@ -155,7 +155,7 @@ int main() {
 			}
 		}break;
 
-		case 0: {//вихiд з калькулятора
+		case 0: {//quit from calc
 			yes_no = 0;
 		}break;
 			break;
